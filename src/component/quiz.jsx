@@ -89,7 +89,7 @@ let  Quiz = ()  => {
     <button className="submit-btn" onClick={handleNext} disabled={apiData.question.length < trace + 1 ? true : false}>Submit</button>
     <div className="nav-buttons">
     <button disabled={trace === 0} id="prev-btn" onClick={handlePrev}>Previous</button>
-    <button id="next-btn" onClick={handleNext} disabled={trace === apiData.question - 2}>Next</button>
+    <button id="next-btn" onClick={handleNext} disabled={trace > apiData.question.length - 2}>Next</button>
   </div>
   </div>  
   
